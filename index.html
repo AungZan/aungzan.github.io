@@ -50,6 +50,11 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="alert alert-success" id="success-alert">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    Thank you for sending mail to me.
+                </div>
             </div>
         </nav>
 
@@ -157,23 +162,26 @@
 
                         <!-- mail section -->
                         <div class="col-lg-6">
-                            <form class="contact row" id="contact-form" method="POST" action="https://formspree.io/nightkiller10@gmail.com">
-
-                                <div class="form-group col-12">
-                                    <input type="text" class="form-control" placeholder="Email" name="_replyto">
-                                </div>
+                            <form class="contact row" id="contact-form" method="POST">
 
                                 <input type="hidden" name="_next" value="https://aungminzan.github.io/" />
                                 <input type="hidden" class="form-control" name="_subject" value="New submission!">
-                                <input type="hidden" name="_format" value="markdown" />
-                                <input type="text" name="_gotcha" style="display:none" />
+
+                                <div class="form-group col-6">
+                                    <input type="text" class="form-control" placeholder="Email" name="_replyto">
+                                </div>
+
+                                <div class="form-group col-6">
+                                    <input type="text" name="name" placeholder="Your name">
+                                </div>
 
                                 <div class="form-group col-12">
                                     <textarea class="form-control" placeholder="Message" name="message" style="height: 140px;"></textarea>
                                 </div>
 
+                                <input type="text" name="_gotcha" style="display:none" />
                                 <div class="form-group col-12 mt-2">
-                                    <button class="btn btn-primary" type="submit">
+                                    <button class="btn btn-primary" type="submit" id="emailSent">
                                         Send Message
                                     </button>
                                 </div>
@@ -196,6 +204,7 @@
 
         <!-- Custom scripts for this template -->
         <script src="js/creative.min.js"></script>
+        <script src="js/custom.js"></script>
 
   </body>
 
